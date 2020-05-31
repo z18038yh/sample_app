@@ -27,5 +27,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_not flash.blank?
     assert flash.key?(:success)
     assert_equal flash[:success], "Welcome to the Sample App!"
+    assert is_logged_in?
   end
 end
